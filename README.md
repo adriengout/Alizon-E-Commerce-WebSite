@@ -13,7 +13,7 @@ Le **Délivraptor** est l'interface de gestion (Back-Office) spécifique au proj
 
 ## Stack Technique
 Le projet s'appuie sur une architecture moderne pour assurer performance et sécurité :
-* **Backend** : PHP et Python pour la logique métier.
+* **Backend** : PHP pour la logique métier.
 * **Frontend** : Interfaces dynamiques conçues en HTML5, CSS3 et JavaScript.
 * **Base de données** : Modélisation et exploitation complète sous **PostgreSQL**.
 * **Versionnage** : Git & GitHub pour le suivi du développement et la collaboration.
