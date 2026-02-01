@@ -1,0 +1,218 @@
+/* --- Ajout du bouton retour --- */
+.btn-retour {
+    align-self: flex-start; /* Aligne le bouton tout à gauche */
+    text-decoration: none;
+    color: #8fa1b3; /* Un gris-bleu discret par défaut */
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Un peu d'espace avant le logo */
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.btn-retour:hover {
+    color: #ffa940; /* Votre couleur orange au survol */
+}
+
+.btn-retour svg {
+    margin-right: 5px; /* Espace entre la flèche et le texte */
+    fill: currentColor; /* La flèche prend la couleur du texte */
+    width: 16px;
+    height: 16px;
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.connexion {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 450px;
+    margin: 50px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.logo {
+    width: 100px;
+    height: 54px;
+}
+
+h1 {
+    font-size: 17px;
+    margin-bottom: 25px;
+    color: #002b5c;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-left: 40px;
+    color: #002b5c;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e9e9e9;
+    width: 300px;
+    height: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e9e9e9;
+    width: 300px;
+    height: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 320px;
+    height: 35px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+footer {
+    color: rgba(47, 83, 126, 1);
+    margin-top: auto;
+    font-size: 14px;
+}
+
+.soumettre {
+    background-color: #ffa940;
+
+}
+
+.soumettre:hover {
+    background-color: #ffb85d;
+}
+
+.creer {
+    background-color: #ffa940;
+}
+
+.creer:hover {
+    background-color: #ffb85d;
+}
+
+.mdpoublie {
+    display: block;
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: -23px;
+    margin-left: 20px;
+    color: #0073e6;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.submit {
+    background-color: #ffa940;
+}
+
+.submit:hover {
+    background-color: #ffb85d;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    margin: 25px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+
+@media screen and (max-width: 431px) {
+    
+ 
+    .connexion {
+        width: 90%; 
+        min-height: 75vh; 
+        height: auto;
+        margin: 0 auto; 
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; 
+    }
+
+
+    input[type="email"], 
+    input[type="password"] {
+        width: 100%; 
+        box-sizing: border-box;
+        height: 50px; /* Plus facile à cliquer */
+        margin-bottom: 15px; 
+    }
+
+
+    button {
+        width: 100%;
+        height: 55px;
+        font-size: 16px;
+    }
+
+
+    label {
+        margin-left: 0;
+        font-size: 14px;
+    }
+    
+    .mdpoublie {
+        margin-left: 0;
+        text-align: center;
+        display: block;
+        padding: 10px 0;
+    }
+    
+
+    .logo {
+        margin: 0 auto;
+    }
+}

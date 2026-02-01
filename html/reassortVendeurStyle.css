@@ -1,0 +1,351 @@
+:root {
+    --primary: #1e6f5c;
+    --accent: #FFB75A;
+    --bg-body: #e8f5f1;
+    --bg-card: #ffffff;
+    --text-dark: #1b2559;
+    --text-secondary: #a3aed0;
+    --radius: 16px;
+    --shadow: 0px 4px 20px rgba(0,0,0,0.05);
+    --success: #42b80b;
+    --warning: #ffae00;
+    --danger: #ee5d50;
+}
+
+.conteneur-principal {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.entete-page {
+    margin-bottom: 30px;
+}
+
+.entete-page h1 {
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.sous-titre {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Messages */
+.message {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.message.success {
+    background: #dcfce7;
+    color: var(--success);
+    border: 1px solid #bbf7d0;
+}
+
+.message.error {
+    background: #fee2e2;
+    color: var(--danger);
+    border: 1px solid #fecaca;
+}
+
+/* Grille principale */
+.grille-reassort {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Sections */
+.section-reassort,
+.section-historique {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 25px;
+}
+
+.section-reassort h2,
+.section-historique h2 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e5f2;
+}
+
+/* Liste des produits */
+.liste-produits-reassort {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* Carte réassort */
+.carte-reassort {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 15px;
+    border-left: 4px solid var(--success);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.carte-reassort:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.carte-reassort.stock-faible {
+    border-left-color: var(--warning);
+}
+
+.carte-reassort.stock-critique {
+    border-left-color: var(--danger);
+    background: #fff5f5;
+}
+
+.info-produit {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.img-produit {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.details-produit h3 {
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.stock-actuel {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.stock-actuel strong {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+.seuil {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Formulaire réassort */
+.form-reassort {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.champs-reassort {
+    display: flex;
+    gap: 10px;
+    flex: 1;
+}
+
+.groupe-input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.groupe-input label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.groupe-input input[type="number"],
+.groupe-input input[type="text"] {
+    padding: 10px 12px;
+    border: 2px solid #e0e5f2;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.groupe-input input[type="number"] {
+    width: 100px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.groupe-input input[type="text"] {
+    width: 180px;
+}
+
+.groupe-input input:focus {
+    border-color: var(--primary);
+}
+
+.btn-reassort {
+    padding: 10px 20px;
+    background: var(--success);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+}
+
+.btn-reassort:hover {
+    background: #3aa00a;
+    transform: translateY(-2px);
+}
+
+/* Tableau historique */
+.table-container {
+    max-height: 600px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.table-historique {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.table-historique thead {
+    background: #f1f5f9;
+}
+
+.table-historique th,
+.table-historique td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e5f2;
+}
+
+.table-historique th {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.table-historique tbody tr:hover {
+    background: #f8fafc;
+}
+
+.quantite-ajoutee {
+    color: var(--success);
+    font-weight: 700;
+}
+
+.avant {
+    color: var(--text-secondary);
+}
+
+.apres {
+    color: var(--success);
+    font-weight: 700;
+}
+
+.commentaire {
+    color: var(--text-secondary);
+    font-style: italic;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* État vide */
+.etat-vide {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-secondary);
+}
+
+.etat-vide p {
+    margin-bottom: 15px;
+}
+
+.btn-primaire {
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.btn-primaire:hover {
+    background: #233d5d;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .grille-reassort {
+        grid-template-columns: 1fr;
+    }
+
+    .form-reassort {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .champs-reassort {
+        flex-direction: column;
+    }
+
+    .groupe-input input[type="number"],
+    .groupe-input input[type="text"] {
+        width: 100%;
+    }
+
+    .btn-reassort {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .conteneur-principal {
+        padding: 10px;
+    }
+
+    .entete-page h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-reassort,
+    .section-historique {
+        padding: 15px;
+    }
+
+    .info-produit {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .table-historique th,
+    .table-historique td {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+}

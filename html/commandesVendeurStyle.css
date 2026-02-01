@@ -1,0 +1,444 @@
+/* ========================================= */
+/* VARIABLES                                */
+/* ========================================= */
+:root {
+    --bg-body: #e8f5f1;
+    --bg-card: #ffffff;
+    --text-primary: #1e6f5c;
+    --text-secondary: #7ea89d;
+    --accent: #1e6f5c;
+
+    --status-ok-bg: #05cd99;
+    --status-wait-bg: #ffae00;
+    --status-bad-bg: #ee5d50;
+    --status-livre-bg: #42b80b;
+
+    --radius: 10px;
+    --shadow: 0px 18px 40px rgba(112, 144, 176, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================================= */
+/* CONTENEUR PRINCIPAL                       */
+/* ========================================= */
+.conteneur {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+/* ========================================= */
+/* ENTETE PAGE                               */
+/* ========================================= */
+.entete-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.entete-page h1 {
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.bouton-retour {
+    background-color: var(--accent);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.bouton-retour:hover {
+    background-color: #165a4a;
+    transform: translateY(-2px);
+}
+
+/* ========================================= */
+/* MESSAGE ERREUR                            */
+/* ========================================= */
+.message-erreur {
+    background: #ff4444;
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+}
+
+/* ========================================= */
+/* STATISTIQUES                              */
+/* ========================================= */
+.ligne-statistiques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.carte-stat {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+    border-left: 4px solid var(--accent);
+}
+
+.carte-stat:hover {
+    transform: translateY(-3px);
+}
+
+.carte-stat.stat-attente {
+    border-left-color: var(--status-bad-bg);
+}
+
+.carte-stat.stat-preparation {
+    border-left-color: var(--status-wait-bg);
+}
+
+.carte-stat.stat-expedie {
+    border-left-color: var(--status-ok-bg);
+}
+
+.carte-stat.stat-livre {
+    border-left-color: var(--status-livre-bg);
+}
+
+.stat-valeur {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 5px;
+}
+
+/* ========================================= */
+/* ZONE FILTRES                              */
+/* ========================================= */
+.zone-filtres {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+
+.formulaire-filtres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.groupe-filtre {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.groupe-filtre label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.groupe-filtre input,
+.groupe-filtre select {
+    padding: 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    min-width: 180px;
+    transition: border-color 0.3s;
+}
+
+.groupe-filtre input:focus,
+.groupe-filtre select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.bouton-filtrer,
+.bouton-effacer {
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.bouton-filtrer {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+}
+
+.bouton-filtrer:hover {
+    background-color: #165a4a;
+}
+
+.bouton-effacer {
+    background-color: #f0f0f0;
+    color: var(--text-primary);
+    border: 2px solid #e0e0e0;
+    text-align: center;
+}
+
+.bouton-effacer:hover {
+    background-color: #e0e0e0;
+}
+
+/* ========================================= */
+/* LISTE DES COMMANDES                       */
+/* ========================================= */
+.liste-commandes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.carte-commande {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.carte-commande:hover {
+    transform: translateY(-3px);
+}
+
+.entete-commande {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.info-commande {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.numero-commande {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.date-commande {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.statut-commande {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+}
+
+.statut-expedie {
+    background-color: var(--status-ok-bg);
+}
+
+.statut-livre {
+    background-color: var(--status-livre-bg);
+}
+
+.statut-preparation {
+    background-color: var(--status-wait-bg);
+}
+
+.statut-attente {
+    background-color: var(--status-bad-bg);
+}
+
+.corps-commande {
+    padding: 20px;
+}
+
+.detail-ligne {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.detail-ligne:last-child {
+    margin-bottom: 0;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    min-width: 100px;
+}
+
+.detail-valeur {
+    color: var(--text-primary);
+}
+
+.produits-liste {
+    font-style: italic;
+}
+
+.pied-commande {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.montant-commande {
+    display: flex;
+    flex-direction: column;
+}
+
+.montant-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.montant-valeur {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.actions-commande {
+    display: flex;
+    gap: 10px;
+}
+
+.bouton-facture {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    display: inline-block;
+}
+
+.bouton-facture:hover {
+    background-color: #165a4a;
+    transform: translateY(-2px);
+}
+
+/* ========================================= */
+/* AUCUNE COMMANDE                           */
+/* ========================================= */
+.aucune-commande {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.aucune-commande p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.aucune-commande a {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.aucune-commande a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================= */
+/* RESPONSIVE                                */
+/* ========================================= */
+@media (max-width: 768px) {
+    .entete-page {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .ligne-statistiques {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .formulaire-filtres {
+        flex-direction: column;
+    }
+
+    .groupe-filtre input,
+    .groupe-filtre select {
+        min-width: 100%;
+    }
+
+    .pied-commande {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .actions-commande {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .entete-commande {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .ligne-statistiques {
+        grid-template-columns: 1fr;
+    }
+
+    .actions-commande {
+        flex-direction: column;
+    }
+
+    .bouton-facture {
+        width: 100%;
+        text-align: center;
+    }
+}

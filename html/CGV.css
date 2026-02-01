@@ -1,0 +1,458 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Nunito', sans-serif;
+  background-color: #f5f7fa;
+}
+
+/***********MAIN CONTENT**********/
+
+main {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Nunito', sans-serif;
+  color: #222;
+  line-height: 1.8;
+}
+
+main h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #203a5c;
+  margin-bottom: 20px;
+  position: relative;
+  font-weight: 700;
+}
+
+main h1::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #203a5c, #4a6fa5);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+.cgv-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  padding: 25px;
+  background: linear-gradient(135deg, #e8f0f7, #d4e4f3);
+  border-radius: 8px;
+  border-left: 6px solid #203a5c;
+  border-right: 6px solid #203a5c;
+  box-shadow: 0 3px 12px rgba(32, 58, 92, 0.12);
+}
+
+.cgv-intro p {
+  font-size: 1.1rem;
+  color: #1a2e47;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/***********SECTIONS**********/
+
+.cgv-section {
+  margin-bottom: 45px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cgv-section:last-of-type {
+  border-bottom: none;
+}
+
+.cgv-section h2 {
+  font-size: 1.8rem;
+  color: #203a5c;
+  margin-bottom: 20px;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.section-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #203a5c, #4a6fa5);
+  color: white;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cgv-section h3 {
+  font-size: 1.3rem;
+  color: #1a2e47;
+  margin: 25px 0 15px 0;
+  font-weight: 700;
+  padding-left: 15px;
+  border-left: 4px solid #4a6fa5;
+}
+
+.cgv-section p {
+  margin-bottom: 18px;
+  text-align: justify;
+  color: #2c3e50;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.cgv-section ul {
+  margin: 20px 0 25px 40px;
+  padding: 0;
+}
+
+.cgv-section li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 10px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.cgv-section li::marker {
+  color: #203a5c;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.cgv-section strong {
+  color: #1a2e47;
+  font-weight: 700;
+  background: linear-gradient(to bottom, transparent 60%, rgba(74, 111, 165, 0.2) 60%);
+}
+
+.cgv-section a {
+  color: #203a5c;
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid #4a6fa5;
+  transition: all 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.cgv-section a:hover {
+  background-color: rgba(74, 111, 165, 0.1);
+  border-bottom-color: #1a2e47;
+}
+
+.cgv-section a:focus {
+  outline: 3px solid #4a6fa5;
+  outline-offset: 2px;
+}
+
+/***********BOXES SPÉCIAUX**********/
+
+.garantie-box {
+  background: linear-gradient(135deg, #f8f9fb, #eef2f7);
+  border-left: 5px solid #4a6fa5;
+  border-top: 2px solid #d0dae6;
+  padding: 20px 25px;
+  margin: 20px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(74, 111, 165, 0.1);
+}
+
+.garantie-box h3 {
+  margin-top: 0;
+  color: #1a2e47;
+  font-weight: 700;
+}
+
+.garantie-box p {
+  margin-bottom: 0;
+}
+
+.contact-box {
+  background: linear-gradient(135deg, #e8f4ff, #d4e9ff);
+  border: 3px solid #4a6fa5;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(74, 111, 165, 0.15);
+}
+
+.contact-box p {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #1a2e47;
+  font-weight: 600;
+}
+
+.contact-box p:last-child {
+  margin-bottom: 0;
+}
+
+/***********SECTION DOUBLE-CLIC MISE EN AVANT**********/
+
+.highlight-section {
+  background: linear-gradient(135deg, #e8f0f7, #f0f6fc);
+  border: 3px solid #203a5c;
+  border-radius: 10px;
+  padding: 35px;
+  margin: 50px 0;
+  box-shadow: 0 4px 15px rgba(32, 58, 92, 0.15);
+  position: relative;
+}
+
+/* Motif pour différencier visuellement sans dépendre de la couleur */
+.highlight-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: repeating-linear-gradient(
+    45deg,
+    #203a5c,
+    #203a5c 10px,
+    #4a6fa5 10px,
+    #4a6fa5 20px
+  );
+  border-radius: 10px 10px 0 0;
+}
+
+.highlight-section h2 {
+  color: #1a2e47;
+  font-weight: 700;
+}
+
+.highlight-section .section-number {
+  background: linear-gradient(135deg, #203a5c, #2f537e);
+  border: 3px solid #1a2e47;
+  box-shadow: 0 3px 8px rgba(32, 58, 92, 0.3);
+}
+
+.double-clic-step {
+  background: white;
+  border-left: 6px solid #4a6fa5;
+  border-top: 2px solid #e0e7ef;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 6px;
+  box-shadow: 0 3px 12px rgba(74, 111, 165, 0.15);
+  position: relative;
+}
+
+/* Indicateur visuel supplémentaire */
+.double-clic-step::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: repeating-linear-gradient(
+    0deg,
+    #4a6fa5,
+    #4a6fa5 5px,
+    #203a5c 5px,
+    #203a5c 10px
+  );
+}
+
+.double-clic-step h3 {
+  color: #1a2e47;
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(135deg, #203a5c, #4a6fa5);
+  color: white;
+  border-radius: 50%;
+  margin-right: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 3px solid #1a2e47;
+  box-shadow: 0 2px 6px rgba(32, 58, 92, 0.3);
+}
+
+.accusé-reception {
+  background: linear-gradient(135deg, #e8f4f8, #d4e9f0);
+  border: 3px solid #2f537e;
+  border-style: double;
+  padding: 25px;
+  margin: 30px 0 0 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(47, 83, 126, 0.15);
+  position: relative;
+}
+
+/* Motif distinctif pour l'accusé de réception */
+.accusé-reception::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    #2f537e,
+    #2f537e 15px,
+    transparent 15px,
+    transparent 30px
+  );
+  border-radius: 0 0 8px 8px;
+}
+
+.accusé-reception h3 {
+  color: #1a2e47;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+/***********FOOTER CGV**********/
+
+.cgv-footer {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 2px solid #e5e5e5;
+  text-align: center;
+  color: #666;
+}
+
+.cgv-footer p {
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+/***********RESPONSIVE**********/
+
+@media (max-width: 768px) {
+  main {
+    margin: 30px 20px;
+    padding: 30px 25px;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
+  .cgv-intro p {
+    font-size: 1rem;
+  }
+
+  .cgv-section h2 {
+    font-size: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-number {
+    margin-bottom: 10px;
+  }
+
+  .cgv-section ul {
+    margin-left: 25px;
+  }
+
+  .double-clic-step,
+  .garantie-box,
+  .contact-box,
+  .accusé-reception {
+    padding: 20px;
+  }
+
+  .highlight-section {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 20px 15px;
+    margin: 20px auto;
+    margin-top: 90px;
+    width: 95%;
+    max-width: calc(100vw - 30px);
+    margin-bottom: 20px;
+  }
+
+  /* Force l'affichage du footer en version mobile pour CGV */
+  body .footer {
+    display: flex !important;
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  body .footer hr {
+    display: none;
+  }
+
+  body .footer section {
+    margin: 15px 0;
+    min-width: 100%;
+  }
+
+  body .footer .logo h2 img {
+    width: 120px;
+  }
+
+  body .footer .payment-logos {
+    justify-content: center;
+  }
+
+  body .footer .payment-logos img {
+    width: 50px;
+  }
+
+  main h1 {
+    font-size: 1.6rem;
+  }
+
+  .cgv-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .section-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+  }
+
+  .cgv-section p,
+  .cgv-intro p {
+    font-size: 0.95rem;
+  }
+}

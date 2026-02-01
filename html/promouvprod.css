@@ -1,0 +1,355 @@
+/* =========================================
+   1. REINITIALISATION & GLOBAUX
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f6f8;
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  font-weight: 600;
+}
+
+/* =========================================
+   3. CONTENEUR & FORMULAIRE
+   ========================================= */
+main.promo-container {
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 1rem;
+  min-height: calc(100vh - 120px);
+}
+
+.promo-form {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 1100px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.promo-form h2 {
+  font-size: 1.8rem;
+  color: #2F537E;
+  margin-bottom: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #FFB75A;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* =========================================
+   4. GRILLE PRINCIPALE (Layout Page)
+   ========================================= */
+.promo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 Grosses Colonnes (Gauche / Droite) */
+  gap: 2rem;
+  align-items: start;
+}
+
+.promo-left, .promo-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.descrip-promo {
+  background-color: #f9fafb;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* =========================================
+   5. CHAMPS (INPUTS)
+   ========================================= */
+.promo-box {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Règle spéciale : Si une boite contient la Description (textarea), 
+   elle prend toute la largeur (les 2 colonnes) */
+.promo-box:has(textarea) {
+  grid-column: 1 / -1;
+}
+
+.promo-box label {
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  padding: 0.75rem;
+  background-color: #fff;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: border-color 0.2s;
+  font-family: 'Nunito', sans-serif;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #FFB75A;
+  box-shadow: 0 0 0 3px rgba(255, 183, 90, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+
+.promo-type label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Checkboxes */
+.promo-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.promo-options label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+   6. BOUTONS D'ACTION (EN BAS)
+   ========================================= */
+.promo-actions {
+  /* Force les boutons tout en bas sur toute la largeur */
+  grid-column: 1 / -1; 
+  
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+  width: 100%;
+}
+
+.btn-cancel,
+.btn-save,
+.btn-save-error {
+  font-size: 1rem;
+  padding: 0.8rem 0;
+  width: 200px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s, background-color 0.2s;
+  text-align: center;
+}
+
+.btn-cancel, .btn-save-error {
+  background-color: #edf2f7;
+  color: #4a5568;
+}
+
+.btn-cancel:hover {
+  background-color: #e2e8f0;
+}
+
+.btn-save {
+  background-color: #FFB75A;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(255, 183, 90, 0.3);
+}
+
+
+.btn-save:hover {
+  background-color: #e6a04f;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   LISTE DES PROMOTIONS (CARTES)
+   ========================================= */
+
+.promotions-list-container {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 1100px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.promotions-list-container h2 {
+    color: #2F537E;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    border-left: 5px solid #FFB75A;
+    padding-left: 15px;
+}
+
+.promotions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.promo-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Badge de réduction */
+.promo-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 800;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.promo-card-image {
+    height: 180px;
+    background: #f0f0f0;
+}
+
+.promo-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promo-card-content {
+    padding: 1.5rem;
+}
+
+.product-category {
+    font-size: 0.75rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.promo-card-content h3 {
+    margin: 0.5rem 0;
+    color: #2F537E;
+    font-size: 1.2rem;
+}
+
+.promo-description {
+    font-size: 0.9rem;
+    color: #444;
+    height: 40px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.promo-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    margin-bottom: 1rem;
+}
+
+.promo-dates {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #95a5a6;
+    font-weight: bold;
+}
+
+/* Actions de la carte */
+.promo-card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit-small, .btn-delete-small {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-edit-small {
+    background: #f3f5f7;
+    color: #2F537E;
+}
+
+.btn-edit-small:hover {
+    background: #e2e8f0;
+}
+
+.btn-delete-small {
+    background: #fff0f0;
+    color: #e74c3c;
+}
+
+.btn-delete-small:hover {
+    background: #ffdada;
+}
+
+/* Style pour le bouton désactivé dans le formulaire */
+.btn-save-error {
+    background-color: #bdc3c7;
+    color: white;
+    cursor: not-allowed;
+    width: 200px;
+    padding: 0.8rem 0;
+    border-radius: 30px;
+    border: none;
+    font-weight: 700;
+}

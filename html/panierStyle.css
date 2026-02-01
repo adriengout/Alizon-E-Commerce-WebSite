@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  font-family: 'Nunito', sans-serif;
+}
+
+main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.panier-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.panier-header h1 {
+  color: #0C1F52;
+  font-size: 32px;
+}
+
+.btn-vider-panier {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.btn-vider-panier:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.panier-vide {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.panier-vide-icon {
+  font-size: 100px;
+  margin-bottom: 20px;
+  opacity: 0.3;
+}
+
+.panier-vide h2 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.panier-vide p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.btn-continuer {
+  display: inline-block;
+  background: #F4C24D;
+  color: #000;
+  padding: 15px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.btn-continuer:hover {
+  background: #e5b340;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(244, 194, 77, 0.4);
+}
+
+.produit {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.img-produit {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h2 {
+  color: #0C1F52;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.note {
+  color: #F4C24D;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.desc {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.prix-actions {
+  text-align: right;
+}
+
+.prix {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0C1F52;
+  margin-bottom: 15px;
+}
+
+.quantite {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f5f5;
+  padding: 5px 10px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.quantite button {
+  background: #0C1F52;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.quantite button:hover {
+  background: #081535;
+}
+
+.quantite span {
+  min-width: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.btn-supprimer {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.btn-supprimer:hover {
+  background: #cc0000;
+}
+
+.total {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+  text-align: right;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.total p {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.total strong {
+  color: #0C1F52;
+  font-size: 32px;
+}
+
+.btn-paiement {
+  background: #F4C24D;
+  color: #000;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-paiement:hover {
+  background: #e5b340;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(244, 194, 77, 0.4);
+}
+
+.panier-info {
+  background: #e7f3ff;
+  border-left: 4px solid #2196F3;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  color: #0c5460;
+}
+
+.panier-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #dc3545;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
+/* Fond modal */
+.modal {
+  display: none; /* caché par défaut */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenu modal */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Boutons */
+.modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.btn-confirm {
+  background-color: #d9534f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Croix de fermeture */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 431px) {
+
+    .panier-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .produit {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .img-produit {
+        width: 100%; 
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .prix-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+    }
+
+    .prix {
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
+    .quantite {
+        margin-bottom: 0;
+    }
+
+    .total {
+        text-align: center;
+    }
+
+    .btn-paiement {
+        width: 100%; 
+        display: block;
+        text-align: center;
+    }
+}

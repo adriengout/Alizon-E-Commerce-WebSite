@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.btn-retour-panier {
+  display: inline-block;
+  margin-bottom: 20px;
+  background: #ccc;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-retour-panier:hover {
+  background: #b5b5b5;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.formulaire {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulaire h2 {
+  color: #0C1F52;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #F4C24D;
+  font-size: 22px;
+}
+
+.formulaire h2:first-child {
+  margin-top: 0;
+}
+
+.recapitulatif {
+  width: 400px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.recapitulatif h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #0C1F52;
+  border-bottom: 2px solid #F4C24D;
+  padding-bottom: 10px;
+  font-size: 22px;
+}
+
+.recap-item {
+  display: flex;
+  gap: 12px;
+  margin: 15px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.recap-item:last-of-type {
+  margin-bottom: 20px;
+}
+
+.recap-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.recap-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recap-item-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.recap-item-qty {
+  font-size: 13px;
+  color: #666;
+}
+
+.recap-item-price {
+  font-weight: 700;
+  color: #0C1F52;
+  text-align: right;
+  font-size: 15px;
+  align-self: flex-start;
+}
+
+.recap-subtotal,
+.recap-shipping,
+.recap-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+.recap-subtotal {
+  color: #555;
+}
+
+.recap-shipping {
+  color: #555;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+}
+
+.recap-total {
+  border-top: 2px solid #0C1F52;
+  margin-top: 15px;
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0C1F52;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  background-color: #fff;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #F4C24D;
+  box-shadow: 0 0 0 3px rgba(244, 194, 77, 0.1);
+}
+
+.two-col {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.two-col>div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.two-col>.ville-wrapper {
+  flex: 2;
+  position: relative;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.jaune {
+  background-color: #F4C24D;
+  width: 100%;
+  color: #000;
+}
+
+.jaune:hover {
+  background-color: #e5b340;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(244, 194, 77, 0.4);
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #fff;
+  border-radius: 0 0 6px 6px;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.suggestions li:hover {
+  background-color: #f8f8f8;
+}
+
+.suggestions li:last-child {
+  border-bottom: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+}
+
+#billing-address {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+
+
+/* --- Media Query iPhone 14 (Max 480px) --- */
+@media screen and (max-width: 431px) {
+
+    /* 1. Ajustement global de la page */
+    body {
+        padding: 10px; /* Moins de marge autour de la page */
+    }
+
+    /* 2. On empile les blocs principaux (Formulaire et Récapitulatif) */
+    section {
+        flex-direction: column; /* Les blocs se mettent l'un sous l'autre */
+        gap: 20px;
+    }
+
+    /* 3. Ajustement du Formulaire */
+    .formulaire {
+        width: 100%;
+        padding: 20px 15px; /* Marges internes réduites */
+        box-shadow: none; /* Optionnel : enlever l'ombre pour un look plus plat */
+        border: 1px solid #eee;
+    }
+
+    .formulaire h2 {
+        font-size: 20px; /* Titre un peu plus petit */
+    }
+
+    /* 4. Les champs sur 2 colonnes (Ville / CP) passent en 1 colonne */
+    .two-col {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .two-col > div {
+        width: 100%;
+    }
+
+    /* 5. Inputs plus hauts pour le tactile */
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+        height: 50px; /* Hauteur confortable pour le pouce */
+        font-size: 16px; /* Évite le zoom automatique sur iPhone */
+    }
+
+    .recapitulatif {
+        width: 100%; 
+        position: static; 
+        top: auto;
+        padding: 20px 15px;
+        order: -1; 
+    }
+
+    .recap-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .recap-item-name {
+        font-size: 13px;
+    }
+
+    .recap-total {
+        font-size: 18px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 18px;
+        font-size: 18px;
+    }
+
+    .btn-retour-panier {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}

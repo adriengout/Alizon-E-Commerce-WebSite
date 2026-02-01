@@ -1,0 +1,323 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #D3D3D3;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+.erreur-message {
+    display: block;
+    color: #c00;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    min-height: 120px;
+    background: #D9D9D9;
+    border: 0.8px solid #0A2540;
+    border-radius: 12px;
+    padding: 15px 18px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    color: #0A2540;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+textarea::placeholder {
+    color: #A8A8A8;
+    font-weight: 400;
+}
+
+textarea:focus {
+    outline: none;
+    border: 1.5px solid #FFB75A;
+    background: #E5E5E5;
+}
+
+textarea.input-erreur {
+    border: 2px solid #f66 !important;
+    background-color: #fff5f5;
+}
+
+.input-erreur {
+    border: 2px solid #f66 !important;
+    background-color: #fff5f5;
+}
+/* Container principal */
+section {
+    background: #FFFFFF;
+    border-radius: 30px;
+    width: 540px;
+    padding: 50px 55px 40px 55px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header .logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #0A2540;
+    margin-bottom: 25px;
+}
+
+/* Indicateur de progression */
+.progress-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.progress-step {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #B8B8B8;
+    white-space: nowrap;
+}
+
+.progress-step.active {
+    color: #0A2540;
+}
+
+.progress-line {
+    width: 35px;
+    height: 2px;
+    background-color: #0A2540;
+}
+
+/* Formulaire */
+form {
+    width: 100%;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #0A2540;
+    margin-bottom: 8px;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+input[type="identifiant"],
+input[type="nom"],
+input[type="name"],
+input[type="Adresse"],
+input[type="codePostalLivraison"],
+input[type="villeLivraison"],
+input[type="AdresseFacturation"],
+input[type="codePostalFacturation"],
+input[type="villeFacturation"] {
+    width: 100%;
+    height: 50px;
+    background: #D9D9D9;
+    border: 0.8px solid #0A2540;
+    border-radius: 12px;
+    padding: 0 18px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    color: #0A2540;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: #A8A8A8;
+    font-weight: 400;
+}
+
+input:focus {
+    outline: none;
+    border: 1.5px solid #FFB75A;
+    background: #E5E5E5;
+}
+
+/* Disposition en deux colonnes pour Nom et Prénom */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-row .form-group input {
+    margin-bottom: 20px;
+}
+
+/* Conteneur des boutons */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+/* Boutons */
+input[type="submit"],
+input[type="button"] {
+    width: 48%;
+    height: 48px;
+    border-radius: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #0A2540;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Bouton Précédent */
+input[type="button"] {
+    background: #FFFFFF;
+    border: 1.2px solid #0A2540;
+}
+
+input[type="button"]:hover {
+    background: #F5F5F5;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton Suivant */
+input[type="submit"],
+.soumettre {
+    background: #FFB75A;
+    border: 0.5px solid #0A2540;
+}
+
+input[type="submit"]:hover,
+.soumettre:hover {
+    background: #FFA940;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(255, 183, 90, 0.4);
+}
+
+input[type="submit"]:active,
+input[type="button"]:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    color: #5A6C7D;
+    line-height: 1.6;
+}
+
+footer a {
+    color: #4A7BA7;
+    text-decoration: none;
+    margin: 0 3px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Ajustement du br */
+br {
+    display: none;
+}
+
+
+/* Trait séparateur */
+.separateur-compte {
+    margin: 30px 0 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Lien vers compte vendeur */
+.lien-autre-compte {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.lien-autre-compte a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lien-autre-compte a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Quand le bouton est désactivé par le JS */
+input[type="submit"]:disabled {
+    background-color: #cccccc !important; /* Gris */
+    color: #666666 !important;
+    cursor: not-allowed !important;
+    border: 1px solid #999999 !important;
+    transform: none !important; /* Enlève l'effet de clic/hover s'il y en a */
+}
+
+/* Lien bouton (créer compte vendeur) */
+.link-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    padding: 14px 20px;
+    background: transparent;
+    border: 1.5px solid #0A2540;
+    border-radius: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #0A2540;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(10, 37, 64, 0.3);
+}

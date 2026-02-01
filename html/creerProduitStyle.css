@@ -1,0 +1,176 @@
+/* ========================================= */
+/* 1. VARIABLES & RESET                      */
+/* ========================================= */
+:root {
+
+    --primary: #1e6f5c;
+    --accent: #1e6f5c;
+    --nav-bg: #cfcfcf;
+
+    --bg-body: #e8f5f1;
+    --bg-card: #ffffff;
+    --text-main: #1b2559;
+    --text-light: #666;
+    --border: #e0e0e0;
+    --radius: 12px;
+    --shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+
+
+/* ========================================= */
+/* 3. CONTENU PAGE   */
+/* ========================================= */
+
+.conteneur {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titre-page {
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: 800;
+    margin-bottom: 30px;
+    padding-left: 15px;
+}
+
+.grille {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.carte {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.carte h3 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 10px;
+}
+
+/* ========================================= */
+/* 4. ÉLÉMENTS DU FORMULAIRE                 */
+/* ========================================= */
+
+label {
+    display: block;
+    font-weight: 700;
+    color: #555;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+label:first-child {
+    margin-top: 0;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(30, 111, 92, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.label-optionnel {
+    font-size: 0.8rem;
+    color: #999;
+    font-weight: normal;
+    float: right;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 20px 0;
+}
+
+/* ========================================= */
+/* 5. BOUTONS D'ACTION                       */
+/* ========================================= */
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.bouton {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bouton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bouton-sauvegarder {
+    background-color: var(--primary); 
+    color: white;
+}
+
+.bouton-annuler {
+    background-color: white;
+    color: #777;
+    border: 1px solid #ccc;
+}
+
+.bouton-annuler:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+

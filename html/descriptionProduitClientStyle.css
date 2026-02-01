@@ -1,0 +1,1363 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+
+/*******HEADER*******/
+
+/* Style du formulaire d'avis intégré */
+#form-avis-container {
+    display: none; /* Caché par défaut */
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+}
+
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-group input[type="text"], .form-group textarea {
+    width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;
+}
+
+/* Système d'étoiles inversé pour la sélection */
+.rating-input { display: flex; flex-direction: row-reverse; justify-content: flex-start; }
+.rating-input input { display: none; }
+.rating-input label { cursor: pointer; font-size: 30px; color: #ccc; }
+.rating-input label:before { content: '★'; }
+.rating-input input:checked ~ label { color: #ffd700; }
+.rating-input label:hover, .rating-input label:hover ~ label { color: #ffd700; }
+
+.btn-submit-avis {
+    background-color: #28a745; color: white; border: none;
+    padding: 10px 20px; cursor: pointer; border-radius: 4px; font-size: 16px;
+}
+.btn-submit-avis:hover { background-color: #218838; }
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #2F537E;
+  color: white;
+  position:sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+
+.header-top {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background-color: #2F537E;
+  flex-wrap: wrap;
+  
+}
+
+.logo {
+  height: 60px;
+}
+
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-box {
+  display: flex;
+  background-color: #FFB75A;
+  border-radius: 50%;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  filter: invert(0.4);
+}
+
+/* Bouton principal (Mon compte) */
+.btn {
+  border: none;
+  border-radius: 25px;
+  padding: 8px 24px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: #FFB75A;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e6a04f;
+}
+
+/* Ligne du bas (navigation) */
+.nav-liens {
+  display: flex;
+  font-family: 'Nunito', sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #203a5c;
+  font-weight: normal;
+  padding: 8px 40px;
+  font-size: 0.9rem;
+}
+
+/* Liens des catégories */
+.nav-left {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-left a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-left a:hover {
+  color: #FFB75A;
+}
+
+/* Séparateur visuel */
+.nav-separator {
+  width: 1px;
+  height: 20px;
+  background-color: #ffffff60;
+  margin: 0 20px;
+}
+
+/* Zone de droite (promo) */
+.nav-right {
+  flex-shrink: 0;
+}
+
+/* Promo cliquable */
+.promo {
+  color: white;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.promo:hover {
+  color: #FFB75A;
+  text-decoration: underline;
+}
+
+
+
+
+/*body**************************/
+
+/*------------------------------
+    FONTS & COLORS
+--------------------------------*/
+
+.error { 
+    color: #d32f2f; 
+    background: linear-gradient(135deg, #ffebee, #ffcdd2); 
+    border: 2px solid #ef5350; 
+    padding: 12px 16px; 
+    border-radius: 8px; 
+    font-weight: 600; 
+    margin-bottom: 20px;
+    font-size: 0.95em;
+    box-shadow: 0 2px 8px rgba(211, 47, 47, 0.2);
+    display: block;
+}
+
+/* Les toasts sont gérés par header.php */
+
+/* ------------------------------
+    RESET & BASE
+--------------------------------*/
+
+body {
+    background: #ffffff;
+    color: #1f1f1f;
+}
+
+main {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+}
+
+main > p {
+    font-size: 14px;
+    color: #7c7c7c;
+    margin-bottom: 25px;
+}
+
+main > a{
+  padding-bottom: 2em;
+}
+
+/* ------------------------------
+    STRUCTURE PRODUIT
+--------------------------------*/
+.main {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    min-height: auto; 
+    margin-bottom: 50px;
+}
+
+/* ------------------------------
+    IMAGES
+--------------------------------*/
+.images {
+    flex: 1;
+}
+
+.images img {
+    width: 100%;
+    max-height: 60vh;
+    border-radius: 18px;
+    object-fit: contain;
+}
+
+.img_secondaires {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.img_secondaires img {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.img_secondaires img:hover {
+    transform: scale(1.04);
+}
+
+/* ------------------------------
+    INFOS PRODUIT
+--------------------------------*/
+.infos_produit {
+    flex: 1;
+}
+
+.infos_produit h2:first-of-type {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.infos_produit p {
+    color: #5f5f5f;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    max-width: 450px;
+}
+
+.infos_produit h2:nth-of-type(2) {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* ------------------------------
+    AVIS / ÉTOILES
+--------------------------------*/
+.avis {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.avis img {
+    width: 20px;
+}
+
+.avis a {
+    text-decoration: none;
+    color: #7c7c7c;
+    font-size: 14px;
+}
+
+.etoiles{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+/* ------------------------------
+    ACTIONS (quantité + favori)
+--------------------------------*/
+.actions {
+    margin-top: 25px;
+}
+
+.actions_haut {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Select quantité */
+#quantite_select {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+}
+
+/* Bouton favoris */
+.actions_haut a {
+    background: #fbd080;
+    color: #3b3b3b;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background .2s;
+}
+
+.actions_haut a:hover {
+    background: #ffca5c;
+}
+
+/* ------------------------------
+    BOUTON AJOUTER AU PANIER
+--------------------------------*/
+.actions_bas .btn-panier {
+    width: 100%;
+    background: #0e1a33;
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.actions_bas .btn-panier:hover {
+    background: #172750;
+}
+
+.actions_bas .btn-panier:disabled {
+    background: #9ca2b2;
+    cursor: not-allowed;
+}
+
+
+
+/* --- SECTION AVIS CLIENTS --- */
+
+.avis_client {
+    flex-basis: 100%; /* Prend toute la largeur sous les colonnes principales */
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.avis_client h3 {
+    color: #004466; /* Bleu foncé */
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+/* Conteneur de chaque avis */
+.avis-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}
+
+/* Ligne supérieure: Profil + Titre + Date */
+.avis-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.avis-profil-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avis-profil-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.avis-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.avis-meta p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.avis-meta strong {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.avis-date {
+    font-size: 0.85em;
+    color: #999;
+}
+
+/* Étoiles spécifiques à l'avis */
+.avis-note {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 5px 0 10px 0;
+    padding-left: 65px;
+}
+.avis-note img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Corps du commentaire et image jointe */
+.avis-body {
+    padding-left: 65px; /* Aligner le commentaire sous le nom */
+    line-height: 1.6;
+}
+
+.avis-body p {
+    margin-top: 0;
+    color: #222;
+}
+
+.avis-image-jointe {
+    max-width: 200px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    display: block;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.avis-image-jointe:hover {
+    transform: scale(1.02);
+}
+
+
+.avis-footer {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    padding-left: 65px;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.avis-footer a {
+    color: #004466;
+    text-decoration: none;
+}
+
+/* Réponse du vendeur dans la vue client */
+.reponse-vendeur-client {
+    background: linear-gradient(135deg, #f8f9fb 0%, #ffffff 100%);
+    border-left: 4px solid #FFB75A;
+    padding: 16px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.reponse-vendeur-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.reponse-vendeur-header strong {
+    color: #FFB75A;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.reponse-vendeur-date {
+    color: #999;
+    font-size: 0.85em;
+}
+
+.reponse-vendeur-text {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Styles pour les boutons de vote */
+.btn-vote {
+    background: #f0f2f5;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.85em;
+    color: #555;
+}
+
+.btn-vote:hover {
+    background: #e4e6e9;
+    border-color: #ccc;
+    transform: translateY(-1px);
+}
+
+.btn-vote:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-vote-utile:hover {
+    background: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.btn-vote-inutile:hover {
+    background: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+.vote-count-utile,
+.vote-count-inutile {
+    font-weight: 700;
+}
+
+/* ------------------------------
+    FORMULAIRE LAISSER UN AVIS
+--------------------------------*/
+.form-nouvel-avis {
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8ecf1;
+}
+
+.form-nouvel-avis h4 {
+    color: #2F537E;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Style des étoiles pour la notation */
+.form-nouvel-avis .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-nouvel-avis .rating input[type="radio"] {
+    display: none;
+}
+
+.form-nouvel-avis .rating label {
+    cursor: pointer;
+    font-size: 36px;
+    color: #d0d0d0;
+    transition: all 0.2s ease;
+}
+
+.form-nouvel-avis .rating label::before {
+    content: '★';
+}
+
+.form-nouvel-avis .rating label:hover,
+.form-nouvel-avis .rating label:hover ~ label {
+    color: #FFB75A;
+    transform: scale(1.15);
+}
+
+.form-nouvel-avis .rating input[type="radio"]:checked ~ label {
+    color: #FFB75A;
+}
+
+/* Conteneur des champs du formulaire */
+.form-nouvel-avis form > div {
+    margin-bottom: 20px;
+}
+
+.form-nouvel-avis label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.form-nouvel-avis input[type="text"],
+.form-nouvel-avis textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e4e8;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+    background: white;
+}
+
+.form-nouvel-avis input[type="text"]:focus,
+.form-nouvel-avis textarea:focus {
+    outline: none;
+    border-color: #2F537E;
+    box-shadow: 0 0 0 3px rgba(47, 83, 126, 0.1);
+}
+
+.form-nouvel-avis textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-nouvel-avis input[type="file"] {
+    padding: 10px;
+    border: 2px dashed #e0e4e8;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.form-nouvel-avis input[type="file"]:hover {
+    border-color: #2F537E;
+    background: #f8f9fb;
+}
+
+/* Bouton de soumission */
+.form-nouvel-avis button[type="submit"] {
+    background: linear-gradient(135deg, #2F537E 0%, #1a3351 100%);
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(47, 83, 126, 0.3);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-nouvel-avis button[type="submit"]:hover {
+    background: linear-gradient(135deg, #1a3351 0%, #0e1f3d 100%);
+    box-shadow: 0 6px 16px rgba(47, 83, 126, 0.4);
+    transform: translateY(-2px);
+}
+
+.form-nouvel-avis button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Message de connexion pour les utilisateurs non connectés */
+.avis_client > p {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #856404;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.avis_client > p a {
+    color: #2F537E;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.avis_client > p a:hover {
+    color: #FFB75A;
+}
+
+/* Bouton modifier avis */
+.btn-modifier-avis {
+    display: inline-block;
+    background: linear-gradient(135deg, #2F537E 0%, #1a3351 100%);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(47, 83, 126, 0.3);
+}
+
+.btn-modifier-avis:hover {
+    background: linear-gradient(135deg, #1a3351 0%, #0e1f3d 100%);
+    box-shadow: 0 6px 16px rgba(47, 83, 126, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Bouton supprimer avis */
+.btn-supprimer-avis {
+    display: inline-block;
+    background: linear-gradient(135deg, #dc3545 0%, #a71d2a 100%);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.btn-supprimer-avis:hover {
+    background: linear-gradient(135deg, #a71d2a 0%, #7d1621 100%);
+    box-shadow: 0 6px 16px rgba(220, 53, 69, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ------------------------------
+    MODAL DE CONFIRMATION
+--------------------------------*/
+.modal-confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-confirm.show {
+    opacity: 1;
+}
+
+.modal-confirm-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+}
+
+.modal-confirm-content {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-width: 480px;
+    width: 90%;
+    animation: modalSlideIn 0.3s ease;
+    z-index: 1;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-30px) scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-confirm-header {
+    padding: 24px 24px 16px 24px;
+    border-bottom: 1px solid #e8ecf1;
+}
+
+.modal-confirm-header h3 {
+    margin: 0;
+    font-size: 1.4em;
+    color: #dc3545;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-confirm-body {
+    padding: 24px;
+}
+
+.modal-confirm-body p {
+    margin: 0;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.modal-confirm-footer {
+    padding: 16px 24px 24px 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.btn-modal-cancel,
+.btn-modal-confirm {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-modal-cancel {
+    background: #f0f2f5;
+    color: #555;
+}
+
+.btn-modal-cancel:hover {
+    background: #e4e6e9;
+}
+
+.btn-modal-confirm {
+    background: linear-gradient(135deg, #dc3545 0%, #a71d2a 100%);
+    color: white;
+    box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+}
+
+.btn-modal-confirm:hover {
+    background: linear-gradient(135deg, #a71d2a 0%, #7d1621 100%);
+    box-shadow: 0 4px 14px rgba(220, 53, 69, 0.4);
+    transform: translateY(-1px);
+}
+
+/* ------------------------------
+    BOUTONS MODIFIER/SUPPRIMER AVIS
+--------------------------------*/
+.btn-modifier-avis, .btn-supprimer-avis {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95em;
+    display: inline-block;
+}
+
+.btn-modifier-avis {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    box-shadow: 0 2px 5px rgba(76, 175, 80, 0.3);
+}
+
+.btn-modifier-avis:hover {
+    background: linear-gradient(135deg, #45a049, #3d8b40);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+}
+
+.btn-supprimer-avis {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.3);
+}
+
+.btn-supprimer-avis:hover {
+    background: linear-gradient(135deg, #c82333, #bd2130);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.4);
+}
+
+/* ------------------------------
+    BOUTON SIGNALER
+--------------------------------*/
+.btn-signaler {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(238, 90, 111, 0.3);
+}
+
+.btn-signaler:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ee5a6f, #dc4055);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(238, 90, 111, 0.4);
+}
+
+.btn-signaler:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.btn-signaler:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.6;
+}
+
+/* ------------------------------
+    MEDIA QUERIES - TABLETTES
+--------------------------------*/
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        height: auto; 
+        gap: 40px;
+    }
+
+    .images {
+        width: 100%;
+    }
+
+    .images > img {
+        width: 100%; 
+    }
+
+    .img_secondaires {
+        justify-content: center;
+    }
+
+    .infos_produit {
+        width: 100%;
+    }
+
+    /* Ajustements formulaire d'avis - Tablette */
+    .form-nouvel-avis {
+        padding: 25px 20px;
+        margin: 25px 0;
+    }
+
+    .form-nouvel-avis h4 {
+        font-size: 1.3em;
+    }
+
+    .form-nouvel-avis .rating {
+        justify-content: center;
+        padding: 12px;
+    }
+
+    .form-nouvel-avis .rating label {
+        font-size: 32px;
+    }
+
+    .avis-item {
+        padding: 15px;
+    }
+    
+    /* Responsivité pour les avis */
+    .avis-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+    
+    .avis-footer {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+    
+    .avis-footer form {
+        width: 100%;
+    }
+    
+    .avis-footer button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn-vote, .btn-signaler {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    /* Boutons Modifier et Supprimer */
+    .form-nouvel-avis > div {
+        flex-direction: column !important;
+        width: 100%;
+    }
+    
+    .btn-modifier-avis, .btn-supprimer-avis {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    
+    #form-supprimer-avis {
+        width: 100%;
+    }
+    
+    .avis-profil-info {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    .avis-profil-img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* ------------------------------
+    MEDIA QUERIES - MOBILE
+--------------------------------*/
+@media screen and (max-width: 480px) {
+
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    .main {
+        flex-direction: column;
+        height: auto; 
+        gap: 25px;
+    }
+
+    .images {
+        width: 100%;
+    }
+
+    .images > img {
+        width: 100%; 
+        max-height: 400px;
+        border-radius: 12px;
+        object-fit: contain;
+    }
+
+    .img_secondaires {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        gap: 12px;
+    }
+
+    .img_secondaires img {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+    }
+
+    .infos_produit {
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .infos_produit h2:first-of-type {
+        font-size: 22px;
+    }
+
+    .infos_produit h2:nth-of-type(2) {
+        font-size: 24px;
+    }
+
+    .infos_produit p {
+        font-size: 14px;
+    }
+
+    .actions_haut {
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .actions_haut a {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    #quantite_select {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .actions_bas .btn-panier {
+        padding: 18px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .avis_client {
+        padding: 5px;
+        margin-top: 30px;
+    }
+
+    .avis_client h3 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+    
+    .avis-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .avis-profil-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .avis-meta strong {
+        font-size: 1em;
+    }
+    
+    .avis-body, .avis-footer, .avis-note {
+        padding-left: 0;
+    }
+
+    .avis-item {
+        padding: 15px 12px;
+        margin-bottom: 12px;
+    }
+
+    .avis-image-jointe {
+        max-width: 100%;
+        max-height: 250px;
+        margin-top: 12px;
+        object-fit: contain;
+    }
+
+    /* Ajustements mobile pour le formulaire d'avis */
+    .form-nouvel-avis {
+        padding: 18px 12px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .form-nouvel-avis h4 {
+        font-size: 1.15em;
+        margin-bottom: 18px;
+    }
+
+    /* Étoiles en version mobile */
+    .form-nouvel-avis .rating {
+        justify-content: center;
+        gap: 5px;
+        padding: 12px 8px;
+        margin-bottom: 18px;
+    }
+
+    .form-nouvel-avis .rating label {
+        font-size: 32px;
+    }
+
+    /* Désactiver l'effet de scale sur mobile pour éviter les bugs tactiles */
+    .form-nouvel-avis .rating label:hover {
+        transform: none;
+    }
+
+    .form-nouvel-avis .rating label:active {
+        transform: scale(1.2);
+    }
+
+    /* Champs du formulaire mobile */
+    .form-nouvel-avis form > div {
+        margin-bottom: 15px;
+    }
+
+    .form-nouvel-avis label {
+        font-size: 0.9em;
+        margin-bottom: 6px;
+    }
+
+    .form-nouvel-avis input[type="text"],
+    .form-nouvel-avis textarea {
+        padding: 10px 14px;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+    
+    /* Avis mobile */
+    .avis-note {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .avis-body {
+        font-size: 0.95em;
+    }
+    
+    .btn-modifier-avis, .btn-supprimer-avis {
+        padding: 12px 16px;
+        font-size: 0.9em;
+    }
+
+    .form-nouvel-avis textarea {
+        min-height: 100px;
+    }
+
+    .form-nouvel-avis input[type="file"] {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    /* Bouton mobile optimisé */
+    .form-nouvel-avis button[type="submit"] {
+        padding: 15px 20px;
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 5px;
+        border-radius: 6px;
+    }
+
+    /* Message de connexion mobile */
+    .avis_client > p {
+        padding: 12px 15px;
+        font-size: 14px;
+        margin: 15px 0;
+    }
+
+    /* Votes et actions sur les avis */
+    .avis-footer {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+        font-size: 0.75em;
+    }
+
+    .btn-vote {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    /* Modal responsive mobile */
+    .modal-confirm-content {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    .modal-confirm-header h3 {
+        font-size: 1.2em;
+    }
+
+    .modal-confirm-body p {
+        font-size: 0.95em;
+    }
+
+    .modal-confirm-footer {
+        flex-direction: column;
+    }
+
+    .btn-modal-cancel,
+    .btn-modal-confirm {
+        width: 100%;
+    }
+}
+
+/* ------------------------------
+    MEDIA QUERIES - TRÈS PETITS ÉCRANS
+--------------------------------*/
+@media screen and (max-width: 360px) {
+    .form-nouvel-avis {
+        padding: 15px 10px;
+    }
+
+    .form-nouvel-avis h4 {
+        font-size: 1.05em;
+    }
+
+    .form-nouvel-avis .rating label {
+        font-size: 28px;
+        gap: 3px;
+    }
+
+    .form-nouvel-avis input[type="text"],
+    .form-nouvel-avis textarea {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .form-nouvel-avis button[type="submit"] {
+        padding: 14px 18px;
+        font-size: 14px;
+    }
+
+    .infos_produit h2:first-of-type {
+        font-size: 20px;
+    }
+
+    .actions_bas .btn-panier {
+        padding: 16px;
+        font-size: 15px;
+    }
+}
+
+
+

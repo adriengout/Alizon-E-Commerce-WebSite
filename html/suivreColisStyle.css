@@ -1,0 +1,156 @@
+/* suiviStyle.css */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+
+}
+
+body { background-color: #f7f7f7; }
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex: 1;
+    font-family: 'Nunito', sans-serif;
+}
+
+.suivi-container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-top: 20px;
+    text-align: center;
+}
+
+h1 { color: #0C1F52; margin-bottom: 10px; }
+
+.bordereau-info {
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 1.1em;
+}
+
+/* --- Barre de progression --- */
+.progress-track {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+/* Ligne grise en fond */
+.progress-track::before {
+    content: "";
+    position: absolute;
+    top: 25px; left: 10%; right: 10%;
+    height: 4px;
+    background: #eee;
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.step .etapeIcon {
+    width: 50px; height: 50px;
+    background: white; 
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+
+.step.standard-step .etapeIcon {
+    border: 4px solid #eee;
+    border-radius: 50%;
+    font-weight: bold;
+    color: #ccc;
+    font-size: 1.2em;
+}
+
+
+.step.transport-step .etapeIcon {
+    border: none;      
+    border-radius: 0;  
+    background: #f7f7f7; 
+    color: #ddd;
+}
+
+
+.step.transport-step .etapeIcon svg {
+    width: 35px;       
+    height: 35px;
+}
+
+
+
+.step.completed.standard-step .etapeIcon {
+    border-color: #0C1F52;
+    background: #0C1F52;
+    color: #fff5f5;
+}
+
+.step.completed.transport-step .etapeIcon {
+    color: #0C1F52;
+}
+
+.step.current.standard-step .etapeIcon {
+    border-color: #F4C24D;
+    color: #F4C24D;
+    transform: scale(1.3);
+}
+
+.step.current.transport-step .etapeIcon {
+    color: #F4C24D; 
+    transform: scale(1.3) translateX(5px);
+}
+
+.step .label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #999;
+}
+
+.step.completed .label, .step.current .label {
+    color: #0C1F52;
+}
+
+/* --- Carte de statut --- */
+.status-card {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #F4C24D;
+    text-align: left;
+}
+
+.status-card h3 { color: #0C1F52; margin-bottom: 10px; }
+.status-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #F4C24D;
+    text-transform: uppercase;
+}
+
+.error-box {
+    background: #fff5f5;
+    color: #c53030;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    .progress-track { flex-direction: column; align-items: flex-start; gap: 30px; }
+    .progress-track::before { display: none; }
+    .step { display: flex; align-items: center; gap: 20px; }
+    .step .etapeIcon { margin: 0; }
+}

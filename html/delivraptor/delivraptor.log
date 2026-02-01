@@ -1,0 +1,104 @@
+2026-01-20 22:31:35 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-20 22:31:35 - [Client: 127.0.0.1] Message reçu: LOGIN alizon_app 70196850422c5344405370f6d0f5075d [Client: Non-authentifié]
+2026-01-20 22:31:35 - [Client: 127.0.0.1] Authentification réussie pour alizon_app
+2026-01-20 22:31:35 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS BORD-ZDBK-7595-0012 [Client: alizon_app]
+2026-01-20 22:31:35 - [Client: 127.0.0.1] Suivi du colis BORD-ZDBK-7595-0012 demandé [Client: alizon_app]
+2026-01-20 22:31:35 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon_app]
+2026-01-20 22:31:35 - [Client: 127.0.0.1] Déconnexion du client alizon_app
+2026-01-20 22:31:55 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-20 22:31:55 - [Client: 127.0.0.1] Message reçu: LOGIN alizon_app 70196850422c5344405370f6d0f5075d [Client: Non-authentifié]
+2026-01-20 22:31:55 - [Client: 127.0.0.1] Authentification réussie pour alizon_app
+2026-01-20 22:31:55 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS BORD-ZDBK-7595-0012 [Client: alizon_app]
+2026-01-20 22:31:55 - [Client: 127.0.0.1] Suivi du colis BORD-ZDBK-7595-0012 demandé [Client: alizon_app]
+2026-01-20 22:31:55 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon_app]
+2026-01-20 22:31:55 - [Client: 127.0.0.1] Déconnexion du client alizon_app
+2026-01-20 22:32:22 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-20 22:32:22 - [Client: 127.0.0.1] Message reçu: LOGIN alizon_app 70196850422c5344405370f6d0f5075d [Client: Non-authentifié]
+2026-01-20 22:32:22 - [Client: 127.0.0.1] Authentification réussie pour alizon_app
+2026-01-20 22:32:22 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS BORD-ZDBK-7595-0012 [Client: alizon_app]
+2026-01-20 22:32:22 - [Client: 127.0.0.1] Suivi du colis BORD-ZDBK-7595-0012 demandé [Client: alizon_app]
+2026-01-20 22:32:22 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon_app]
+2026-01-20 22:32:22 - [Client: 127.0.0.1] Déconnexion du client alizon_app
+2026-01-20 22:33:46 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-20 22:33:46 - [Client: 127.0.0.1] Message reçu: LOGIN alizon_app 70196850422c5344405370f6d0f5075d [Client: Non-authentifié]
+2026-01-20 22:33:46 - [Client: 127.0.0.1] Authentification réussie pour alizon_app
+2026-01-20 22:33:46 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS BORD-ZDBK-7595-0012 [Client: alizon_app]
+2026-01-20 22:33:46 - [Client: 127.0.0.1] Suivi du colis BORD-ZDBK-7595-0012 demandé [Client: alizon_app]
+2026-01-20 22:33:46 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon_app]
+2026-01-20 22:33:46 - [Client: 127.0.0.1] Déconnexion du client alizon_app
+2026-01-28 15:56:34 - [Client: SERVEUR] Démarrage du service Délivraptor
+2026-01-28 15:56:37 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 15:56:37 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 15:56:37 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 15:56:37 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS BORD-WZQM-6817-0016 [Client: alizon]
+2026-01-28 15:57:00 - [Client: SERVEUR] Démarrage du service Délivraptor
+2026-01-28 15:57:03 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 15:57:03 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 15:57:03 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 15:57:03 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS BORD-WZQM-6817-0016 [Client: alizon]
+2026-01-28 15:57:04 - [Client: 127.0.0.1] Suivi du colis BORD-WZQM-6817-0016 demandé [Client: alizon]
+2026-01-28 15:57:04 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon]
+2026-01-28 15:57:04 - [Client: 127.0.0.1] Déconnexion du client alizon
+2026-01-28 15:57:19 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 15:57:19 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 15:57:19 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 15:57:19 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS BORD-WZQM-6817-0016 [Client: alizon]
+2026-01-28 15:57:19 - [Client: 127.0.0.1] Suivi du colis BORD-WZQM-6817-0016 demandé [Client: alizon]
+2026-01-28 15:57:19 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon]
+2026-01-28 15:57:19 - [Client: 127.0.0.1] Déconnexion du client alizon
+2026-01-28 16:03:14 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 16:03:14 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 16:03:14 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 16:03:14 - [Client: 127.0.0.1] Message reçu: GENERER_BORDEREAU 17 [Client: alizon]
+2026-01-28 16:03:14 - [Client: 127.0.0.1] Echec GENERER_BORDEREAU: capacite max atteinte [Client: alizon]
+2026-01-28 16:03:18 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 16:03:18 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 16:03:18 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 16:03:18 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS Capacité maximale atteinte : 3 [Client: alizon]
+2026-01-28 16:03:18 - [Client: 127.0.0.1] Suivi du colis Capacité demandé [Client: alizon]
+2026-01-28 16:03:18 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon]
+2026-01-28 16:03:18 - [Client: 127.0.0.1] Déconnexion du client alizon
+2026-01-28 16:03:31 - [Client: SERVEUR] Démarrage du service Délivraptor
+2026-01-28 16:03:37 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 16:03:37 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 16:03:37 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 16:03:37 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS Capacité maximale atteinte : 3 [Client: alizon]
+2026-01-28 16:03:37 - [Client: 127.0.0.1] Suivi du colis Capacité demandé [Client: alizon]
+2026-01-28 16:03:37 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon]
+2026-01-28 16:03:37 - [Client: 127.0.0.1] Déconnexion du client alizon
+2026-01-28 16:20:20 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 16:20:20 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 16:20:20 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 16:20:20 - [Client: 127.0.0.1] Message reçu: GENERER_BORDEREAU 16 [Client: alizon]
+2026-01-28 16:20:20 - [Client: 127.0.0.1] Nouveau bordereau BORD-WOUA-4379-0016 généré pour la commande 16 [Client: alizon]
+2026-01-28 16:20:31 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 16:20:31 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 16:20:31 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 16:20:31 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS BORD-WOUA-4379-0016 [Client: alizon]
+2026-01-28 16:20:31 - [Client: 127.0.0.1] Suivi du colis BORD-WOUA-4379-0016 demandé [Client: alizon]
+2026-01-28 16:20:31 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon]
+2026-01-28 16:20:31 - [Client: 127.0.0.1] Déconnexion du client alizon
+2026-01-28 16:20:41 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 16:20:41 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 16:20:41 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 16:20:41 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS BORD-WOUA-4379-0016 [Client: alizon]
+2026-01-28 16:20:41 - [Client: 127.0.0.1] Suivi du colis BORD-WOUA-4379-0016 demandé [Client: alizon]
+2026-01-28 16:20:41 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon]
+2026-01-28 16:20:41 - [Client: 127.0.0.1] Déconnexion du client alizon
+2026-01-28 16:36:08 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 16:36:08 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 16:36:08 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 16:36:08 - [Client: 127.0.0.1] Message reçu: GENERER_BORDEREAU 5 [Client: alizon]
+2026-01-28 16:36:08 - [Client: 127.0.0.1] Nouveau bordereau BORD-LPKY-2089-0005 généré pour la commande 5 [Client: alizon]
+2026-01-28 16:36:21 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 16:36:21 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 16:36:21 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 16:36:21 - [Client: 127.0.0.1] Message reçu: SUIVRE_COLIS BORD-LPKY-2089-0005 [Client: alizon]
+2026-01-28 16:36:21 - [Client: 127.0.0.1] Suivi du colis BORD-LPKY-2089-0005 demandé [Client: alizon]
+2026-01-28 16:36:21 - [Client: 127.0.0.1] Message reçu: QUIT [Client: alizon]
+2026-01-28 16:36:21 - [Client: 127.0.0.1] Déconnexion du client alizon
+2026-01-28 16:46:38 - [Client: 127.0.0.1] Connexion du client établie.
+2026-01-28 16:46:38 - [Client: 127.0.0.1] Message reçu: LOGIN alizon admin [Client: Non-authentifié]
+2026-01-28 16:46:38 - [Client: 127.0.0.1] Authentification réussie pour alizon
+2026-01-28 16:46:38 - [Client: 127.0.0.1] Message reçu: GENERER_BORDEREAU 17 [Client: alizon]
+2026-01-28 16:46:38 - [Client: 127.0.0.1] Nouveau bordereau BORD-PUNZ-2516-0017 généré pour la commande 17 [Client: alizon]

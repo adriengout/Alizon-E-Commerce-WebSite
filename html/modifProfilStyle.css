@@ -1,0 +1,895 @@
+/* Réinitialisation et police globale */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+    height: 100%; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    background-color: #F5F5F5;
+    
+
+    min-height: 100vh; 
+    padding: 0;
+}
+
+footer {
+    margin-top: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    background-color: #F5F5F5;
+}
+
+/* Section principale du haut (profil + dernière commande) */
+.top-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 23px;
+}
+
+/* Carte profil (gauche) */
+.profile-card {
+    flex: 1;
+    max-width: 400px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.profile-header {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    background: #D9D9D9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-greeting {
+    font-weight: 700;
+    font-size: 18px;
+    color: #0A2540;
+    margin-bottom: 12px;
+}
+
+.profile-email-box {
+    background: #F2F2F2;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-style: normal;
+}
+
+.profile-email-label {
+    font-weight: 600;
+    font-size: 13px;
+    color: #0A2540;
+    margin-bottom: 5px;
+}
+
+.profile-email {
+    font-weight: 400;
+    font-size: 14px;
+    color: #0A2540;
+}
+
+.profile-name {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0A2540;
+    margin-bottom: 15px;
+}
+
+.btn-modify-info {
+    width: 100%;
+    height: 45px;
+    background: #FFB75A;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #0A2540;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-modify-info:hover {
+    background: #e6a04f;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(255, 183, 90, 0.4);
+}
+
+/* Dernière commande (droite) */
+.last-order-card {
+    flex: 2;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.last-order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.last-order-title {
+    font-weight: 700;
+    font-size: 20px;
+    color: #0A2540;
+}
+
+.last-order-total {
+    text-align: right;
+}
+
+.total-label {
+    font-weight: 700;
+    font-size: 24px;
+    color: #0A2540;
+}
+
+.article-count {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+}
+
+.order-products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    text-align: center;
+}
+
+.product-image {
+    width: 120px;
+    height: 120px;
+    background: #F5F5F5;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 0 8px 0;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-name {
+    font-weight: 400;
+    font-size: 13px;
+    color: #0A2540;
+}
+
+.product-price {
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    color: #2F537E;
+    margin-top: 4px;
+}
+
+.more-items-info {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Section menu latéral + contenu principal */
+.content-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 23px;
+}
+
+/* Menu latéral */
+.sidebar-menu {
+    width: 220px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+}
+
+.menu-item {
+    width: 100%;
+    height: 70px;
+    background: #FFFFFF;
+    border: none;
+    border-bottom: 1px solid #E8E8E8;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0A2540;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background: #F8F8F8;
+}
+
+.menu-item.active {
+    background: #FFB75A;
+    color: #0A2540;
+    font-weight: 700;
+}
+
+/* Zone de contenu principal */
+.main-content {
+    flex: 1;
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Section informations détaillées */
+.details-section {
+    display: flex;
+    gap: 40px;
+}
+
+.avatar-section {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.large-avatar {
+    width: 180px;
+    height: 180px;
+    background: #D9D9D9;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 15px 0;
+    overflow: hidden;
+}
+
+.large-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-change-photo {
+    width: 180px;
+    height: 40px;
+    background: #FFB75A;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #0A2540;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.btn-change-photo:hover {
+    background: #e6a04f;
+    transform: translateY(-2px);
+}
+
+/* Formulaire d'informations */
+.info-form {
+    flex: 1;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.form-label {
+    font-weight: 700;
+    font-size: 18px;
+    color: #0A2540;
+    min-width: 120px;
+}
+
+.form-input {
+    flex: 1;
+    height: 45px;
+    background: #FFFFFF;
+    border: 2px solid #0A2540;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0A2540;
+}
+
+.form-input:disabled {
+    background: #F5F5F5;
+    cursor: not-allowed;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #FFB75A;
+}
+
+.input-erreur {
+    border: 2px solid #f66 !important;
+    background-color: #fff5f5;
+    flex: 1;
+    height: 45px;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0A2540;
+}
+
+.erreur-message {
+    display: block;
+    color: #c00;
+    font-size: 0.9em;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Boutons d'action */
+.action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.btn-cancel {
+    width: 150px;
+    height: 50px;
+    background: #2F537E;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background: #203a5c;
+}
+
+.btn-modify {
+    width: 150px;
+    height: 50px;
+    background: #FFB75A;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #0A2540;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-modify:hover {
+    background: #e6a04f;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(255, 183, 90, 0.4);
+}
+
+/* Sections du bas */
+.bottom-section {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto 40px auto;
+    padding: 0 23px;
+    align-items: stretch; /* Assure la même hauteur */
+}
+
+/* 1. Correction du problème de largeur */
+/* On force le formulaire (qui contient le bouton déconnexion) à prendre autant de place que l'autre bouton */
+.bottom-section form {
+    flex: 1;
+    display: flex; /* Permet au bouton à l'intérieur de prendre toute la place */
+}
+
+/* 2. Styles communs pour les deux boutons */
+.change-password-card,
+.logout-card {
+    width: 100%;          /* Remplit son conteneur */
+    height: 60px;         /* Hauteur plus élégante (au lieu de 80px) */
+    border-radius: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase; /* Rend le texte plus "bouton" */
+    letter-spacing: 0.5px;
+}
+
+/* 3. Style spécifique : Changer mot de passe */
+.change-password-card {
+    flex: 1; /* Prend 50% de l'espace */
+    background: #FFFFFF;
+    border: 2px solid #2F537E;
+    color: #2F537E;
+}
+
+.change-password-card:hover {
+    background: #2F537E;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(47, 83, 126, 0.2);
+}
+
+/* 4. Style spécifique : Déconnexion */
+.logout-card {
+    /* Pas de flex:1 ici car le parent (form) l'a déjà */
+    background: #FFB75A;
+    border: 2px solid #FFB75A; /* Bordure invisible mais utile pour l'alignement */
+    color: #0A2540;
+}
+
+.logout-card:hover {
+    background: #e6a04f;
+    border-color: #e6a04f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 183, 90, 0.4);
+}
+
+/* Classe utilitaire pour masquer visuellement */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Styles pour address */
+address {
+    font-style: normal;
+}
+
+/* Styles pour figure */
+figure {
+    margin: 0;
+}
+
+/* Historique des commandes */
+.order-history-section {
+    padding: 0;
+}
+
+.history-title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #0A2540;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E8E8E8;
+}
+
+.historical-order-item {
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.historical-order-item .order-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #E0E0E0;
+    padding-bottom: 10px;
+}
+
+.historical-order-item h3 {
+    font-weight: 700;
+    font-size: 18px;
+    color: #2F537E;
+    margin: 0;
+}
+
+.order-meta-info {
+    text-align: right;
+    font-size: 14px;
+}
+
+.order-date {
+    margin-bottom: 5px;
+}
+
+.order-status {
+    margin-top: 5px;
+}
+
+.order-status strong {
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+.en-transit { background-color: #ee5d50; }
+.livrée { background-color: #42b80b; }
+.livraison { background-color: #05cd99; }
+.en-préparation { background-color: #ffae00; }
+.expédiée { background-color: #05cd99; }
+.en-attente-de-paiement { background-color: #ee5d50; }
+
+.order-summary-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.total-summary {
+    flex-shrink: 0;
+    width: 200px;
+}
+
+.total-label-history {
+    font-weight: 600;
+    font-size: 16px;
+    color: #0A2540;
+    margin-bottom: 5px;
+}
+
+.article-count-history {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.btn-invoice {
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    color: #2F537E;
+    border: 1px solid #2F537E;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-invoice:hover {
+    background-color: #F0F0F0;
+}
+
+.order-lines-details {
+    flex: 1;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+.order-lines-details summary {
+    font-weight: 600;
+    color: #FFB75A;
+    cursor: pointer;
+    list-style: none;
+}
+
+.order-lines-details summary::before {
+    content: "+"; 
+    margin-right: 5px;
+    font-weight: 700;
+    color: #2F537E;
+}
+
+.order-lines-details[open] summary::before {
+    content: "-"; 
+}
+
+.line-items-list {
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0;
+    border-top: 1px dotted #E0E0E0;
+    margin-top: 10px;
+}
+
+.line-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 14px;
+    color: #0A2540;
+}
+
+.product-qty {
+    font-weight: 700;
+    color: #2F537E;
+    margin-right: 10px;
+}
+
+.product-name-list {
+    flex: 1;
+}
+
+.product-price-list {
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    min-height: 120px;
+    background: #FFFFFF;
+    border: 2px solid #0A2540;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #0A2540;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+textarea::placeholder {
+    color: #666;
+    font-weight: 400;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #FFB75A;
+}
+
+textarea:disabled {
+    background: #F5F5F5;
+    cursor: not-allowed;
+}
+
+textarea.input-erreur {
+    border: 2px solid #f66 !important;
+    background-color: #fff5f5;
+}
+
+/* --- Media Query iPhone 14 (Max 480px) --- */
+@media screen and (max-width: 431px) {
+    
+    /* --- GLOBAL & STRUCTURE --- */
+    .top-section, 
+    .content-section, 
+    .details-section, 
+    .bottom-section {
+        flex-direction: column;
+        padding: 10px 15px; /* Padding latéral standard */
+        width: 100%;
+        gap: 20px;
+    }
+
+    /* --- CARTE PROFIL & COMMANDE --- */
+    .profile-card, 
+    .last-order-card {
+        max-width: 100%;
+        width: 100%;
+        padding: 20px; /* Un peu moins de padding interne */
+    }
+
+    /* --- MENU LATÉRAL (Scrollable horizontalement) --- */
+    .sidebar-menu {
+        width: 100%;
+        display: flex;
+        overflow-x: auto; 
+        margin-bottom: 10px;
+        border-radius: 10px; /* Plus joli sur mobile */
+        border: 1px solid #E8E8E8;
+        /* Enlever le box-shadow excessif si besoin */
+    }
+
+    .menu-item {
+        flex-shrink: 0;
+        width: auto;
+        padding: 0 20px;
+        border-bottom: none;
+        border-right: 1px solid #E8E8E8;
+        font-size: 14px; /* Texte menu un peu plus petit */
+    }
+
+    /* --- CONTENU PRINCIPAL --- */
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    /* --- FORMULAIRE PROFIL --- */
+    .details-section {
+        gap: 30px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px; /* Rapproche le label de l'input */
+        margin-bottom: 15px;
+    }
+
+    .form-label {
+        min-width: auto;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .form-input, .input-erreur {
+        width: 100%;
+        height: 45px; /* Hauteur confortable */
+        font-size: 15px;
+    }
+
+    /* --- BOUTONS DU FORMULAIRE (Annuler / Enregistrer) --- */
+    .action-buttons {
+        flex-direction: column-reverse; /* "Enregistrer" en haut, "Annuler" en bas (meilleure UX) */
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .btn-cancel, 
+    .btn-modify {
+        width: 100%;
+        height: 50px;
+    }
+
+    /* --- BOUTONS DU BAS (Password / Logout) - CORRECTION --- */
+    .bottom-section {
+        padding: 0 15px;
+        gap: 15px; /* Espace net entre les deux cartes */
+        margin-bottom: 80px; /* Marge en bas de page */
+    }
+
+    .change-password-card, 
+    .logout-card {
+        width: 100%;        
+        flex: none;         
+        height: 60px;       /* Hauteur identique et réduite (80px -> 60px) */
+        font-size: 16px;    /* Taille de police harmonisée */
+        margin: 0;
+        
+        /* Centrage du contenu */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Correction visuelle des bordures pour qu'ils aient la même taille */
+    .change-password-card {
+        box-sizing: border-box; /* S'assure que la bordure est incluse dans la hauteur */
+    }
+
+    /* --- HISTORIQUE COMMANDES --- */
+    .historical-order-item .order-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .order-meta-info {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+    
+    .order-summary-details {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .total-summary {
+        width: 100%;
+        border-bottom: 1px dashed #E0E0E0;
+        padding-bottom: 15px;
+    }
+}
