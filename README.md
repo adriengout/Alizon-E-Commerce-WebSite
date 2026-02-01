@@ -1,8 +1,8 @@
-# 🦖 Projet Alizon - Plateforme E-commerce
+# Projet Alizon - Plateforme E-commerce
 
 [cite_start]Ce projet consiste en la conception et le développement d'une application web complète (Full Stack) dédiée à la vente en ligne, réalisée dans le cadre de mon BUT Informatique à l'IUT de Lannion[cite: 83].
 
-## 📋 Présentation Générale
+## Présentation Générale
 Alizon est une solution e-commerce robuste permettant la gestion d'un catalogue de produits, le tunnel d'achat client et une administration simplifiée via un outil dédié.
 
 ### Focus : Le Délivraptor
